@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'constans/colors_constans.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TechnoRhythm',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: primarySwatchColor,
       ),
       home: const MainPage(),
       debugShowCheckedModeBanner: false,
@@ -32,8 +34,10 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        title: const Text('TechnoRhythm'),
+        centerTitle: true,
       ),
+      drawer: const Drawer(),
     );
   }
 }
