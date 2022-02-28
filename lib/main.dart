@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constans/colors_constans.dart';
+import 'screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,23 +23,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
-
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('TechnoRhythm'),
-        centerTitle: true,
-      ),
-      drawer: const Drawer(),
-    );
-  }
-}
 
