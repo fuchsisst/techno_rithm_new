@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constans/colors_constans.dart';
+import '../constants/colors_constants.dart';
+import '../widgets/product_list.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -23,6 +24,13 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       drawer: const Drawer(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: const[
+             ProductList(),
+          ],
+        ),
+      ),
     );
   }
 }
