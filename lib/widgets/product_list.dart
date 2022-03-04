@@ -7,13 +7,18 @@ class ProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 245,
+    return Container(
+      height: 220,
+      margin: const EdgeInsets.symmetric(horizontal: 3,vertical: 10),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
-        ProductCard()
-      ],),
+          ProductCard(),
+          ProductCard(),
+          ProductCard(),
+          ProductCard(),
+        ],
+      ),
     );
   }
 }
