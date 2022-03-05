@@ -5,7 +5,9 @@ import '../constants/colors_constants.dart';
 class CategoryCard extends StatelessWidget {
   final String categoryTitle;
   final IconData iconCategory;
-  const CategoryCard({required this.categoryTitle, required this.iconCategory, Key? key}) : super(key: key);
+  const CategoryCard(
+      {required this.categoryTitle, required this.iconCategory, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +20,23 @@ class CategoryCard extends StatelessWidget {
       width: 120,
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
-        onTap: (){},
+        onTap: () {},
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget> [
-            Icon(iconCategory, size: 60, color: primarySwatchColor[600]!.withOpacity(0.7),),
-             Text(categoryTitle, style: const TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-              fontWeight: FontWeight.w600
-            ),)
+          children: <Widget>[
+            Icon(
+              iconCategory,
+              size: 60,
+              color: primarySwatchColor[600]!.withOpacity(0.7),
+            ),
+            Text(
+              categoryTitle,
+              style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600),
+            )
           ],
         ),
       ),
