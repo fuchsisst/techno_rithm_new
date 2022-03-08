@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:techno_rithm_new/constants/colors_constants.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({Key? key}) : super(key: key);
+  final String productCode;
+  const ProductCard({required this.productCode, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +16,17 @@ class ProductCard extends StatelessWidget {
       width: 180,
       child: Column(
         children: [
-          Row(
-            children: const <Widget>[
-              Icon(Icons.favorite),
-              Text('Код: 23434525')
-            ],
+          Padding(
+            padding: const EdgeInsets.fromLTRB(6, 6, 6, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Icon(Icons.favorite, size: 32, color: primarySwatchColor[100],),
+                Text('Код: $productCode', style: const TextStyle(fontSize: 11, color: Colors.black54, fontWeight: FontWeight.w600),)
+              ],
+            ),
           ),
-          const Icon(Icons.computer, size: 105,),
+          const Icon(Icons.computer, size: 100,),
           const Text('Телевізор Samsung 55" 4K UHD Smart TV ...'),
           Row(
             children: const [
