@@ -3,7 +3,9 @@ import 'package:techno_rithm_new/constants/colors_constants.dart';
 
 class ProductCard extends StatelessWidget {
   final String productCode;
-  const ProductCard({required this.productCode, Key? key}) : super(key: key);
+  final IconData productIcon;
+  final String productTitle;
+  const ProductCard({required this.productCode, required this.productIcon, required this.productTitle, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +28,8 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
-          const Icon(Icons.computer, size: 100,),
-          const Text('Телевізор Samsung 55" 4K UHD Smart TV ...'),
+          Icon(productIcon, size: 100, color:primarySwatchColor[800] ),
+          Align(alignment: Alignment.centerLeft,child: Padding(padding: const EdgeInsets.fromLTRB(6,4, 0, 0),child: Text(productTitle))),
           Row(
             children: const [
               Icon(Icons.star),

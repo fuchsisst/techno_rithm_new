@@ -15,7 +15,7 @@ class ProductList extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 3,vertical: 10),
       child: ListView.builder(
         itemCount: productCode.length,
-        itemBuilder: (cts, index) =>  ProductCard(productCode: productCode[index],),
+        itemBuilder: (cts, index) =>  ProductCard(productCode: productCode[index],productIcon: productIcon[index], productTitle: productTitle[index],),
         scrollDirection: Axis.horizontal,
       ),
     );
